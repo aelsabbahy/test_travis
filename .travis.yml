@@ -1,4 +1,4 @@
-#language: python
+language: python
 
 script:
   - echo "hello world"
