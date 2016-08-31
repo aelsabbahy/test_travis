@@ -1,5 +1,7 @@
 # hmm
 language: python
 
+sudo: false
+
 script:
   - echo "hello world"
