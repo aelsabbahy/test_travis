@@ -1,7 +1,8 @@
 # hmm
-language: python
+language: go
 
 sudo: false
 
 script:
-  - echo "hello world"
+  - go build
+  - go test
