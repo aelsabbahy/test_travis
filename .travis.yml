@@ -1,8 +1,9 @@
-# bump
-language: go
-
-sudo: false
-
-script:
-  - go build
-  - go test
+# test
+## bump
+#language: go
+#
+#sudo: false
+#
+#script:
+#  - go build
+#  - go test
