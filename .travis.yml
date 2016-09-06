@@ -6,5 +6,6 @@ sudo: false
 before_install:
   - echo "test"
 script:
+  - ls llkjdsfa
   - go build
   - go test
