@@ -1,10 +1,10 @@
-# test3
-# blah
-## bump
-#language: go
-#
-#sudo: false
-#
-#script:
-#  - go build
-#  - go test
+# bump
+language: go
+
+sudo: false
+
+before_install:
+  - echo "test"
+script:
+  - go build
+  - go test
