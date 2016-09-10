@@ -1,11 +1,8 @@
-# blah
-# test2
-# blah
-## bump
-#language: go
-#
-#sudo: false
-#
-#script:
-#  - go build
-#  - go test
+# bump
+language: go
+
+sudo: false
+
+script:
+  - go build
+  - go test
