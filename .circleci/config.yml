@@ -10,10 +10,12 @@ jobs:
       - restore_cache:
           key: test_travis-{{ .Branch }}
       - run: find .
-      - run: go get github.com/urfave/cli
-      - run: go build .
-      - run: go test .
+      - run: curl https://glide.sh/get | sh
+      - run: glide install
       - save_cache:
           key: test_travis-{{ .Branch }}
           paths:
             - /go/src/github.com/aelsabbahy/test_travis/vendor
+      - run: find .
+      - run: go build .
+      - run: go test .
