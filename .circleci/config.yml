@@ -9,7 +9,7 @@ jobs:
       - checkout
       - restore_cache:
           key: test_travis-{{ .Branch }}
-      - run: find /go/src/github.com/aelsabbahy/test_travis/vendor
+      - run: find .
       - run: go get github.com/urfave/cli
       - run: go build .
       - run: go test .
