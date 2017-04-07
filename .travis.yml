@@ -1,4 +1,4 @@
-# bump21
+# bump.
 language: go
 
 sudo: false
