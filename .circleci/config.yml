@@ -10,9 +10,9 @@ jobs:
       - restore_cache:
           key: test_travis-{{ .Branch }}-{{ checksum "glide.lock" }}
       - run: find .
-      - run: curl https://glide.sh/get | sh
-      - run: glide install
-      - run: env
+        #- run: curl https://glide.sh/get | sh
+      - #- run: glide install
+      - run: time env
       - run: whoami && id
       #- run: glide --help
       - save_cache:
@@ -20,7 +20,7 @@ jobs:
           paths:
             - /go/src/github.com/aelsabbahy/test_travis/vendor
             - /go/src/github.com/aelsabbahy/test_travis/.glide
-      - run: find .
-      - run: go build .
-      - run: go test .
+      - run: time find .
+      - run: time go build .
+      - run: time go test .
       - run: time go run main.go
