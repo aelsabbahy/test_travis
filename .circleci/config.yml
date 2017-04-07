@@ -7,4 +7,12 @@ jobs:
     working_directory: /go/src/github.com/aelsabbahy/test_travis
     steps:
       - checkout
-      - run: echo "hello world"
+      - restore_cache:
+          key: test_travis-{{ .Branch }}
+      - run: go get github.com/urfave/cli
+      - run: go build .
+      - run: go test .
+      - save_cache:
+          key: test_travis-{{ .Branch }}
+          paths:
+            - /go/src/github.com/aelsabbahy/test_travis/vendor
