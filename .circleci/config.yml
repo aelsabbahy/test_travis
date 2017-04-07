@@ -2,11 +2,9 @@
 version: 2
 jobs:
   build:
+    docker:
+      - image: golang:1.8.0
     working_directory: /go/src/github.com/aelsabbahy/test_travis
-  docker:
-    - image: golang:1.8.0
-  steps:
-    - checkout
-    - run:
-      name: hello world
-      command: echo "hello world"
+    steps:
+      - checkout
+      - run: echo "hello world"
