@@ -20,6 +20,7 @@ jobs:
           paths:
             - /go/src/github.com/aelsabbahy/test_travis/vendor
             - /go/src/github.com/aelsabbahy/test_travis/.glide
+      - run: du -hcs vendor/ .glide/
       - run: time find .
       - run: time go build .
       - run: time go test .
